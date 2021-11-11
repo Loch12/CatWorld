@@ -40,6 +40,15 @@ class CatViewController: UIViewController {
             }
         }
         
+        
+        //Mudanças visuais
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "backgroundAsset")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
         nameLabel.layer.masksToBounds = true
         nameLabel.layer.cornerRadius = 20
         
