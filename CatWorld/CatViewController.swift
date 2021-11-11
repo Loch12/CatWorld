@@ -42,13 +42,16 @@ class CatViewController: UIViewController {
         
         
         //Mudanças visuais
-        
+                
+        //setando background
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "backgroundAsset")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
         
+        
+        //modificando labels
         nameLabel.layer.masksToBounds = true
         nameLabel.layer.cornerRadius = 20
         
@@ -64,6 +67,7 @@ class CatViewController: UIViewController {
     }
 }
 
+//extension que carrega a imagem atraves do JSON
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode

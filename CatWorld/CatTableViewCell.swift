@@ -14,7 +14,6 @@ class CatTableViewCell: UITableViewCell {
     @IBOutlet weak var catName: UILabel!
     @IBOutlet weak var catView: UIView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
